@@ -9,6 +9,7 @@ namespace Sandbox461
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            AutoMapperConfig.CreateMaps();
         }
     }
 }

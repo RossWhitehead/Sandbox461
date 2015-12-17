@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AutoMapper;
+using Sandbox461.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -38,8 +40,7 @@ namespace Sandbox461.Controllers
         {
             foreach (var file in files)
             {
-                //var filename = Path.Combine(Server.MapPath("~/App_Data"), file.FileName);
-                //file.SaveAs(filename);
+                var doc = Mapper.Map<SupportedDocument>(file);
             }
 
             return Json(files.Select(x => new { name = x.FileName }));
