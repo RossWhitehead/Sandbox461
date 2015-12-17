@@ -46,8 +46,7 @@ namespace Sandbox461.Controllers
 
         public ActionResult UploadAjax(List<HttpPostedFileBase> files)
         {
-
-            List<SupportedDocument> docs = TempData["docs"] == null ? new List<SupportedDocument>() : TempData["docs"] as List<SupportedDocument>;
+            List<SupportedDocument> docs = TempData["docs"] as List<SupportedDocument> ?? new List<SupportedDocument>();
 
             foreach (var file in files)
             {
@@ -55,7 +54,7 @@ namespace Sandbox461.Controllers
                 docs.Add(doc);
             }
 
-            if (TempData["docs"] == null)
+            if (TempData.ContainsKey("docs"))
                 TempData.Add("docs", docs);
             else
                 TempData["docs"] = docs;
