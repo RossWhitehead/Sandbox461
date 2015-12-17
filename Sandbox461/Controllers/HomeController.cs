@@ -36,12 +36,29 @@ namespace Sandbox461.Controllers
             return View();
         }
 
+
+        public ActionResult Save()
+        {
+            ViewBag.Message = "Upload page.";
+
+            return View("Upload");
+        }
+
         public ActionResult UploadAjax(List<HttpPostedFileBase> files)
         {
+
+            List<SupportedDocument> docs = TempData["docs"] == null ? new List<SupportedDocument>() : TempData["docs"] as List<SupportedDocument>;
+
             foreach (var file in files)
             {
                 var doc = Mapper.Map<SupportedDocument>(file);
+                docs.Add(doc);
             }
+
+            if (TempData["docs"] == null)
+                TempData.Add("docs", docs);
+            else
+                TempData["docs"] = docs;
 
             return Json(files.Select(x => new { name = x.FileName }));
         }
