@@ -13,9 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox461.Core", "Sandbox4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sandbox461.Tests", "Sandbox461.Tests", "{3E7470A6-1DAC-423C-A8AF-8AE6D3E28ADD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox461.Tests.Domain", "Sandbox461.Domain.Tests\Sandbox461.Tests.Domain.csproj", "{6A2B0551-E9B9-4E47-8DDF-C32017088246}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox461.Tests.Domain", "Sandbox461.Tests.Domain\Sandbox461.Tests.Domain.csproj", "{6A2B0551-E9B9-4E47-8DDF-C32017088246}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox461.Tests.Website", "Sandbox461.Website.Tests\Sandbox461.Tests.Website.csproj", "{D10BDE40-CCD4-4729-BC62-FFF65A8D3F52}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox461.Tests.Website", "Sandbox461.Tests.Website\Sandbox461.Tests.Website.csproj", "{D10BDE40-CCD4-4729-BC62-FFF65A8D3F52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
