@@ -9,29 +9,29 @@ using System.Web.Mvc;
 
 namespace Sandbox461.Website.Controllers
 {
-    public class HomeController : Controller
+    public partial class HomeController : Controller
     {
-        public ActionResult Index()
+        public virtual ActionResult Index()
         {
             Session.Add("testkey", "testvalue");
             return View();
         }
 
-        public ActionResult About()
+        public virtual ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public virtual ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
 
-        public ActionResult Upload()
+        public virtual ActionResult Upload()
         {
             ViewBag.Message = "Upload page.";
 
@@ -39,14 +39,14 @@ namespace Sandbox461.Website.Controllers
         }
 
 
-        public ActionResult Save()
+        public virtual ActionResult Save()
         {
             ViewBag.Message = "Upload page.";
 
             return View("Upload");
         }
 
-        public ActionResult UploadAjax(List<HttpPostedFileBase> files)
+        public virtual ActionResult UploadAjax(List<HttpPostedFileBase> files)
         {
             List<SupportedDocument> docs = TempData["docs"] as List<SupportedDocument> ?? new List<SupportedDocument>();
 
