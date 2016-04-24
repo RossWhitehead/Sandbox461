@@ -1,4 +1,4 @@
-﻿namespace Sandbox461.ViewModels.Default
+﻿namespace Sandbox461.ViewModels
 {
     public class Category
     {

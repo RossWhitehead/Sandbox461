@@ -1,4 +1,4 @@
-﻿using Sandbox461.ViewModels.Default;
+﻿using Sandbox461.ViewModels.Test;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +9,22 @@ namespace Sandbox461.Controllers
 {
     public class TestController : Controller
     {
-        // GET: Test
-        public ActionResult Index()
+        // GET: Create
+        public ActionResult Create()
         {
-            var vm = new TestIndexViewModel { Name = "Ross Whitehead", SelectedCategoryId = 3, StartDate = new DateTime(2012, 1, 1) };
-            return View("Index", vm);
+            return View("Create", new CreateVM() { EndDate = DateTime.Now });
+        }
+
+        // POST: Create
+        [HttpPost]
+        public ActionResult Create(CreateVM vm)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+
+            return View("Create", vm);
         }
     }
 }
